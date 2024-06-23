@@ -2,8 +2,8 @@ import cv2
 import numpy as np
 
 video_name = 'scrolling_text.mp4'
-frame_width = 640
-frame_height = 200
+frame_width = 100
+frame_height = 100
 frame_rate = 144
 
 text = input('Введите строку: ')
@@ -13,7 +13,7 @@ fourcc = cv2.VideoWriter_fourcc(*'mp4v')
 video = cv2.VideoWriter(video_name, fourcc, frame_rate, (frame_width, frame_height))
 
 font = cv2.FONT_ITALIC
-font_thickness = 6
+font_thickness = 3
 
 font_scale = frame_height / 50  
 text_size = cv2.getTextSize(text, font, font_scale, font_thickness)[0]
